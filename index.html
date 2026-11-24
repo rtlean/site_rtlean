@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>RT Lean Activities Pro — Processos, Gestão e Inteligência Artificial</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="RT Lean Activities Pro conecta Lean Management, Agilidade e Inteligência Artificial para melhorar processos, desenvolver pessoas e criar soluções alinhadas à sua operação.">
+<meta name="description" content="RT Lean Activities Pro conecta Lean Management, Agilidade e Inteligência Artificial para eliminar desperdícios, melhorar o fluxo e criar soluções alinhadas à sua operação.">
 <link rel="icon" href="emblema.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -16,121 +16,267 @@ a{color:#083838}a:hover{color:#042424}
 .h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;font-weight:800;color:#083838;margin:0 0 16px;letter-spacing:-.01em}
 .lead{font-size:18px;line-height:1.6;color:#24343D;margin:0;max-width:720px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#FFFFFF;border:1px solid #DCE4E7;border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.card{background:#FFFFFF;border:1px solid #DCE4E7;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:10px;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(8,56,56,.10)}
 .card h3{margin:0;font-size:19px;color:#083838}
 .card p{margin:0;font-size:15px;line-height:1.55;color:#24343D}
 .tag{font-size:13px;color:#5A6B73;margin:0}
+.icon{width:56px;height:56px;border-radius:14px;background:#EEF7E0;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.muda{display:inline-block;align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#083838;background:#EEF7E0;border-radius:999px;padding:4px 10px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none}
 .btn-p{background:#88C808;color:#042424}.btn-p:hover{background:#6FAE05;color:#042424}
 .btn-s{border:2px solid #083838;color:#083838}.btn-s:hover{background:#083838;color:#FFFFFF}
 .step{display:flex;flex-direction:column;gap:8px}
 .num{width:44px;height:44px;border-radius:50%;background:#083838;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:800}
 .nav a{text-decoration:none;font-weight:600;font-size:15px}
-@media (max-width:760px){.nav-links{display:none}.hero-grid{grid-template-columns:1fr}}
+.flow-card{background:#FFFFFF;border:1px solid #DCE4E7;border-radius:18px;padding:24px;box-shadow:0 18px 40px rgba(8,56,56,.08)}
+.dash{stroke-dasharray:6 10;animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.bar-wait{background:repeating-linear-gradient(135deg,#DCE4E7 0 10px,#EEF2F3 10px 20px)}
+.glow{position:relative}
+.glow::after{content:"";position:absolute;inset:auto -10% -40% auto;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(136,200,8,.22),rgba(136,200,8,0) 70%);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.dash{animation:none}.card{transition:none}}
+@media (max-width:760px){.nav-links{display:none}.hero-grid{grid-template-columns:1fr}.hdr{height:auto!important;padding:16px 0}.hdr img{height:64px!important}}
 </style>
 </head>
 <body>
 <div style="font-family: Inter, system-ui, sans-serif; color: #24343D">
-<header style="border-bottom: 1px solid #E6ECEE; background: #FFFFFF">
+<header class="hdr" style="border-bottom: 1px solid #E6ECEE; background: #FFFFFF">
 <div class="wrap nav" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 104px">
 <a href="#inicio"><img src="logo.png" alt="RT Lean Activities Pro — Processos, Gestão e Inteligência Artificial" style="height: 92px; width: auto; display: block"></a>
-<nav class="nav-links" style="display: flex; gap: 28px" aria-label="Principal">
+<nav class="nav-links" style="display: flex; gap: 26px" aria-label="Principal">
 <a href="#solucoes">Soluções</a>
 <a href="#como">Como trabalhamos</a>
 <a href="#abordagem">Lean e IA</a>
+<a href="#experiencia">Experiência</a>
+<a href="#glossario">Glossário</a>
 <a href="#sobre">Sobre</a>
 </nav>
 <a class="btn btn-p" href="#contato">Fale conosco</a>
 </div>
 </header>
-<section id="inicio" style="background: #F2F7EE; padding: 96px 0 88px">
+
+<section id="inicio" class="glow" style="background: #F2F7EE; padding: 96px 0 88px">
 <div class="wrap hero-grid" style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center">
 <div>
 <p class="eyebrow">Processos · Gestão · Inteligência Artificial</p>
 <h1 style="margin: 0 0 20px; font-size: clamp(36px,5vw,58px); line-height: 1.08; font-weight: 800; color: #042424; letter-spacing: -.02em">Processos melhores. Inteligência aplicada ao seu negócio.</h1>
-<p class="lead">A RT Lean Activities Pro conecta Lean Management, Agilidade e Inteligência Artificial para melhorar processos, desenvolver pessoas e criar soluções alinhadas à sua operação.</p>
+<p class="lead">A RT Lean Activities Pro conecta Lean Management, Agilidade e Inteligência Artificial para eliminar desperdícios, melhorar o fluxo e criar soluções alinhadas à sua operação.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px">
 <a class="btn btn-p" href="#contato">Converse sobre seu desafio</a>
 <a class="btn btn-s" href="#solucoes">Conheça nossas soluções</a>
 </div>
 </div>
-<div style="background: #042424; border-radius: 16px; padding: 36px; color: #FFFFFF">
+<div style="background: #083838; border-radius: 16px; padding: 36px; color: #FFFFFF">
 <p style="margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #A6E03A">Nossa tese</p>
 <p style="margin: 0 0 18px; font-size: 24px; line-height: 1.35; font-weight: 700">Automação sem redesenho de processo só acelera a bagunça.</p>
 <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9D6DB">O valor aparece quando o fluxo é repensado antes de ser automatizado. Primeiro entender o fluxo; depois definir onde a inteligência contribui.</p>
 </div>
 </div>
+
+<div class="wrap" style="margin-top: 56px">
+<div class="flow-card">
+<svg viewBox="0 0 1000 210" role="img" aria-labelledby="flow-title" style="width: 100%; height: auto; display: block">
+<title id="flow-title">Ilustração de um fluxo com etapas e esperas entre elas</title>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#58A808"/></marker>
+</defs>
+<line class="dash" x1="180" y1="100" x2="255" y2="100" stroke="#88C808" stroke-width="3" marker-end="url(#arr)"/>
+<line class="dash" x1="380" y1="100" x2="455" y2="100" stroke="#88C808" stroke-width="3" marker-end="url(#arr)"/>
+<line class="dash" x1="580" y1="100" x2="655" y2="100" stroke="#88C808" stroke-width="3" marker-end="url(#arr)"/>
+<line class="dash" x1="780" y1="100" x2="855" y2="100" stroke="#88C808" stroke-width="3" marker-end="url(#arr)"/>
+<g font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+<rect x="60" y="68" width="120" height="64" rx="12" fill="#083838"/><text x="120" y="106" fill="#FFFFFF">Pedido</text>
+<rect x="260" y="68" width="120" height="64" rx="12" fill="#083838"/><text x="320" y="106" fill="#FFFFFF">Análise</text>
+<rect x="460" y="68" width="120" height="64" rx="12" fill="#083838"/><text x="520" y="106" fill="#FFFFFF">Aprovação</text>
+<rect x="660" y="68" width="120" height="64" rx="12" fill="#083838"/><text x="720" y="106" fill="#FFFFFF">Produção</text>
+<rect x="860" y="68" width="120" height="64" rx="12" fill="#083838"/><text x="920" y="106" fill="#FFFFFF">Entrega</text>
+</g>
+<g font-family="Inter, system-ui, sans-serif" font-size="13" fill="#5A6B73" text-anchor="middle">
+<text x="217" y="58">espera</text>
+<text x="417" y="58">espera</text>
+<text x="617" y="58">espera</text>
+<text x="817" y="58">espera</text>
+</g>
+<circle r="6" fill="#88C808"><animateMotion dur="9s" repeatCount="indefinite" path="M60,100 L960,100"/></circle>
+<circle r="6" fill="#58A808"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M60,100 L960,100"/></circle>
+<circle r="6" fill="#288808"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" path="M60,100 L960,100"/></circle>
+<text x="500" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#24343D">Exemplo ilustrativo: o trabalho passa por várias etapas, e a espera entre elas costuma pesar mais do que a execução.</text>
+</svg>
+</div>
+</div>
 </section>
+
 <section style="padding: 80px 0">
 <div class="wrap">
-<p class="eyebrow">Onde costumamos começar</p>
-<h2 class="h2">Reconhece algum destes sinais na sua operação?</h2>
-<div class="grid" style="margin-top: 32px">
-<div class="card"><h3>Retrabalho e correções</h3><p>Erros que voltam, cadastros duplicados e tempo gasto consertando o que já deveria estar certo.</p></div>
-<div class="card"><h3>Demora e filas</h3><p>Espera por aprovação, transferências entre áreas e excesso de trabalho iniciado ao mesmo tempo.</p></div>
-<div class="card"><h3>Pouca visibilidade</h3><p>Relatórios sem uso, decisões concentradas em poucas pessoas e dificuldade de enxergar o fluxo completo.</p></div>
-<div class="card"><h3>IA sem direção</h3><p>Vontade de usar IA e automação, mas sem clareza de onde ela realmente contribui para o resultado.</p></div>
+<p class="eyebrow">Onde o fluxo costuma travar</p>
+<h2 class="h2">Os desperdícios aparecem no dia a dia. Reconhece algum?</h2>
+<p class="lead">Quase todo problema de processo pode ser lido como um desperdício clássico do Lean. Nomear o desperdício é o primeiro passo para tratá-lo.</p>
+<div class="grid" style="margin-top: 36px">
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></div>
+<span class="muda">Muda: defeitos</span>
+<h3>Retrabalho e correções</h3><p>Erros que voltam, cadastros duplicados e tempo gasto consertando o que já deveria estar certo.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><path d="M6 3h12M6 21h12M7 3c0 5 5 5 5 9s-5 4-5 9M17 3c0 5-5 5-5 9s5 4 5 9"/></svg></div>
+<span class="muda">Muda: espera</span>
+<h3>Demora e filas</h3><p>Espera por aprovação, transferências entre áreas e excesso de trabalho iniciado ao mesmo tempo.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<span class="muda">Muda: estoque invisível</span>
+<h3>Pouca visibilidade</h3><p>Relatórios sem uso, decisões concentradas em poucas pessoas e dificuldade de enxergar o fluxo completo.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg></div>
+<span class="muda">Muda: superprocessamento</span>
+<h3>IA sem direção</h3><p>Vontade de usar IA e automação, mas sem clareza de onde ela realmente contribui para o resultado.</p></div>
 </div>
 </div>
 </section>
+
 <section id="solucoes" style="background: #F2F7EE; padding: 80px 0">
 <div class="wrap">
 <p class="eyebrow">Soluções</p>
 <h2 class="h2">Da melhoria de processos à aplicação de Inteligência Artificial</h2>
 <p class="lead">Unimos consultoria, desenvolvimento e capacitação para conectar pessoas, gestão e tecnologia ao trabalho real. Você pode começar por um diagnóstico, uma capacitação ou um problema já delimitado.</p>
 <div class="grid" style="margin-top: 36px">
-<div class="card"><h3>Consultoria Lean</h3><p>Mapeamos o fluxo, investigamos causas e conduzimos experimentos de melhoria.</p><p class="tag">Para filas, retrabalho e etapas sem propósito claro.</p></div>
-<div class="card"><h3>Gestão ágil de times</h3><p>Entrada e priorização organizadas, trabalho visível, limites de WIP e rotinas de gestão.</p><p class="tag">Para excesso de demandas e baixa previsibilidade.</p></div>
-<div class="card"><h3>Automações de processos</h3><p>Simplificamos o processo, explicitamos regras e exceções e implementamos o fluxo automatizado.</p><p class="tag">Para tarefas repetitivas e sistemas que precisam se comunicar.</p></div>
-<div class="card"><h3>Agentes de IA</h3><p>Agentes com função, fontes, ferramentas e limites de autonomia definidos, com supervisão humana.</p><p class="tag">Para atendimento, consulta a documentos e gestão de demandas.</p></div>
-<div class="card"><h3>Soluções digitais</h3><p>Aplicações e painéis sob medida quando as ferramentas existentes não atendem ao processo.</p><p class="tag">Recorte inicial, protótipo, construção e validação.</p></div>
-<div class="card"><h3>Treinamentos</h3><p>Lean, Agilidade e IA aplicados ao contexto dos participantes, com prática e exemplos reais.</p><p class="tag">Para lideranças e equipes que precisam aplicar o conhecimento.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/><path d="M7 10h6M10 7v6"/></svg></div>
+<h3>Consultoria Lean</h3><p>Mapeamos o fluxo, investigamos causas e conduzimos experimentos de melhoria.</p><p class="tag">Para filas, retrabalho e etapas sem propósito claro.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2"><rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="13" rx="1"/></svg></div>
+<h3>Gestão ágil de times</h3><p>Entrada e priorização organizadas, trabalho visível, limites de WIP e rotinas de gestão.</p><p class="tag">Para excesso de demandas e baixa previsibilidade.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l3.5 8M17 7.5l-3.5 8M7.5 6h9"/></svg></div>
+<h3>Automações de processos</h3><p>Simplificamos o processo, explicitamos regras e exceções e implementamos o fluxo automatizado.</p><p class="tag">Para tarefas repetitivas e sistemas que precisam se comunicar.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9.5" cy="13" r="1.2" fill="#083838"/><circle cx="14.5" cy="13" r="1.2" fill="#083838"/><path d="M9.5 16.5h5"/></svg></div>
+<h3>Agentes de IA</h3><p>Agentes com função, fontes, ferramentas e limites de autonomia definidos, com supervisão humana.</p><p class="tag">Para atendimento, consulta a documentos e gestão de demandas.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14l3-3 3 2 4-5"/><path d="M8 21h8M12 18v3"/></svg></div>
+<h3>Soluções digitais</h3><p>Aplicações e painéis sob medida quando as ferramentas existentes não atendem ao processo.</p><p class="tag">Recorte inicial, protótipo, construção e validação.</p></div>
+<div class="card">
+<div class="icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#083838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l10-3 10 3-10 3z"/><path d="M6 8v5c0 1.5 2.7 3 6 3s6-1.5 6-3V8"/><path d="M22 6v5"/></svg></div>
+<h3>Treinamentos</h3><p>Lean, Agilidade e IA aplicados ao contexto dos participantes, com prática e exemplos reais.</p><p class="tag">Para lideranças e equipes que precisam aplicar o conhecimento.</p></div>
 </div>
-<p style="margin: 24px 0 0; font-size: 15px; color: #24343D">Também oferecemos <strong>acompanhamento contínuo</strong> para sustentar práticas, revisar indicadores e evoluir soluções após a implantação.</p>
+<p style="margin: 28px 0 0; font-size: 15px; color: #24343D">Também oferecemos <strong>acompanhamento contínuo</strong> para sustentar práticas, revisar indicadores e evoluir soluções após a implantação.</p>
 </div>
 </section>
+
 <section id="como" style="padding: 80px 0">
-<div class="wrap">
+<div class="wrap hero-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center">
+<div>
 <p class="eyebrow">Como trabalhamos</p>
-<h2 class="h2">Um caminho claro do primeiro contato ao resultado acompanhado</h2>
-<div class="grid" style="margin-top: 36px; grid-template-columns: repeat(auto-fit,minmax(170px,1fr))">
+<h2 class="h2">Um ciclo, não uma cartilha</h2>
+<p class="lead" style="margin-bottom: 36px">Cada projeto segue o ciclo de melhoria contínua: enxergar, entender, experimentar e sustentar. Trabalhamos com pessoas que fazem o trabalho, no lugar onde ele acontece.</p>
+<div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 26px">
 <div class="step"><div class="num">1</div><h3 style="margin: 0; font-size: 17px; color: #083838">Conversa inicial</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Entendemos o desafio e se faz sentido trabalharmos juntos.</p></div>
-<div class="step"><div class="num">2</div><h3 style="margin: 0; font-size: 17px; color: #083838">Diagnóstico</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Observamos fluxo, pessoas, dados e restrições.</p></div>
+<div class="step"><div class="num">2</div><h3 style="margin: 0; font-size: 17px; color: #083838">Diagnóstico</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Observamos fluxo, pessoas, dados e restrições no gemba.</p></div>
 <div class="step"><div class="num">3</div><h3 style="margin: 0; font-size: 17px; color: #083838">Proposta</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Objetivo, escopo, responsabilidades e critérios de aceite.</p></div>
 <div class="step"><div class="num">4</div><h3 style="margin: 0; font-size: 17px; color: #083838">Piloto</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Testamos a hipótese em um recorte viável e geramos evidências.</p></div>
 <div class="step"><div class="num">5</div><h3 style="margin: 0; font-size: 17px; color: #083838">Implementação</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Solução incorporada à operação, documentada e com pessoas capacitadas.</p></div>
 <div class="step"><div class="num">6</div><h3 style="margin: 0; font-size: 17px; color: #083838">Acompanhamento</h3><p style="margin: 0; font-size: 15px; line-height: 1.5">Medimos adoção e indicadores e planejamos a evolução.</p></div>
 </div>
 </div>
+<div class="flow-card" style="display: flex; justify-content: center">
+<svg viewBox="0 0 360 360" role="img" aria-labelledby="cycle-title" style="width: 100%; max-width: 380px; height: auto">
+<title id="cycle-title">Ciclo de melhoria contínua: ver, entender, experimentar e sustentar</title>
+<g fill="none" stroke-width="26" stroke-linecap="butt">
+<path d="M60,180 A120,120 0 0 1 180,60" stroke="#88C808"/>
+<path d="M180,60 A120,120 0 0 1 300,180" stroke="#58A808"/>
+<path d="M300,180 A120,120 0 0 1 180,300" stroke="#288808"/>
+<path d="M180,300 A120,120 0 0 1 60,180" stroke="#083838"/>
+</g>
+<g font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="17">
+<text x="50" y="52" text-anchor="end" fill="#2E7D12">Ver</text>
+<text x="310" y="52" text-anchor="start" fill="#2E7D12">Entender</text>
+<text x="310" y="322" text-anchor="start" fill="#2E7D12">Experimentar</text>
+<text x="50" y="322" text-anchor="end" fill="#2E7D12">Sustentar</text>
+</g>
+<g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+<text x="180" y="176" font-size="18" font-weight="800" fill="#083838">Melhoria</text>
+<text x="180" y="198" font-size="18" font-weight="800" fill="#083838">contínua</text>
+</g>
+</svg>
+</div>
+</div>
 </section>
+
 <section id="abordagem" style="background: #083838; padding: 88px 0; color: #FFFFFF">
 <div class="wrap">
 <p class="eyebrow" style="color: #A6E03A">Lean e IA</p>
 <h2 class="h2" style="color: #FFFFFF">Lean como fundamento. Inteligência para evoluir.</h2>
 <p class="lead" style="color: #DCE7EB">Antes de acelerar uma operação, é preciso entender como ela funciona. Aplicamos pensamento Lean para identificar gargalos, reduzir desperdícios e melhorar o fluxo. Com Agilidade, gestão da mudança e IA, transformamos oportunidades em iniciativas acompanhadas por indicadores.</p>
-<div class="grid" style="margin-top: 36px">
-<div style="border-top: 3px solid #88C808; padding-top: 16px"><h3 style="margin: 0 0 6px; font-size: 19px">Lean</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55">Entender valor, fluxo, desperdícios e causas.</p></div>
-<div style="border-top: 3px solid #88C808; padding-top: 16px"><h3 style="margin: 0 0 6px; font-size: 19px">Agilidade</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55">Conduzir entregas e mudanças em ciclos de aprendizagem.</p></div>
-<div style="border-top: 3px solid #88C808; padding-top: 16px"><h3 style="margin: 0 0 6px; font-size: 19px">Inteligência Artificial</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55">Apoiar interpretação, conhecimento e execução em tarefas adequadas.</p></div>
-<div style="border-top: 3px solid #88C808; padding-top: 16px"><h3 style="margin: 0 0 6px; font-size: 19px">Gestão da mudança</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55">Envolver lideranças e usuários para favorecer a adoção.</p></div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px" class="hero-grid">
+<div style="background: #042424; border-radius: 16px; padding: 28px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #A6E03A; letter-spacing: .06em; text-transform: uppercase">Quadro Kanban com limite de WIP</p>
+<svg viewBox="0 0 520 260" role="img" aria-labelledby="kanban-title" style="width: 100%; height: auto; display: block; margin-top: 12px">
+<title id="kanban-title">Quadro Kanban com três colunas e limite de trabalho em andamento</title>
+<g font-family="Inter, system-ui, sans-serif">
+<rect x="10" y="10" width="160" height="236" rx="12" fill="#083838"/>
+<rect x="180" y="10" width="160" height="236" rx="12" fill="#083838"/>
+<rect x="350" y="10" width="160" height="236" rx="12" fill="#083838"/>
+<text x="90" y="40" text-anchor="middle" font-size="14" font-weight="700" fill="#DCE7EB">A fazer</text>
+<text x="260" y="40" text-anchor="middle" font-size="14" font-weight="700" fill="#DCE7EB">Em andamento</text>
+<text x="430" y="40" text-anchor="middle" font-size="14" font-weight="700" fill="#DCE7EB">Concluído</text>
+<rect x="222" y="49" width="76" height="22" rx="11" fill="#88C808"/>
+<text x="260" y="64" text-anchor="middle" font-size="12" font-weight="800" fill="#042424">limite: 2</text>
+<rect x="26" y="66" width="128" height="44" rx="8" fill="#0E5A5A"/>
+<rect x="26" y="120" width="128" height="44" rx="8" fill="#0E5A5A"/>
+<rect x="26" y="174" width="128" height="44" rx="8" fill="#0E5A5A"/>
+<rect x="196" y="78" width="128" height="44" rx="8" fill="#58A808"/>
+<rect x="196" y="132" width="128" height="44" rx="8" fill="#58A808"/>
+<rect x="366" y="66" width="128" height="44" rx="8" fill="#2E7D12"/>
+<rect x="366" y="120" width="128" height="44" rx="8" fill="#2E7D12"/>
+</g>
+<circle r="7" fill="#A6E03A"><animateMotion dur="7s" repeatCount="indefinite" path="M90,88 L260,100 L430,88"/></circle>
+</svg>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: #C9D6DB">Limitar o trabalho em andamento faz o item terminar antes de começar outro. É uma das formas mais simples de reduzir a espera.</p>
 </div>
+
+<div style="background: #042424; border-radius: 16px; padding: 28px">
+<p style="margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #A6E03A; letter-spacing: .06em; text-transform: uppercase">Tempo de valor × tempo de espera</p>
+<p style="margin: 0 0 22px; font-size: 14px; line-height: 1.5; color: #C9D6DB">Ilustração: em muitos processos, a maior parte do lead time é espera, não trabalho que agrega valor.</p>
+<div style="display: flex; height: 56px; border-radius: 10px; overflow: hidden; border: 1px solid #0E5A5A">
+<div style="width: 8%; background: #88C808" title="Trabalho que agrega valor"></div>
+<div class="bar-wait" style="width: 92%" title="Espera"></div>
+</div>
+<div style="display: flex; justify-content: space-between; margin-top: 12px; font-size: 13px; color: #C9D6DB">
+<span><strong style="color:#A6E03A">■</strong> Trabalho que agrega valor</span>
+<span><span style="color:#DCE4E7">▨</span> Espera entre etapas</span>
+</div>
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(2,1fr); gap: 16px">
+<div style="border-top: 3px solid #88C808; padding-top: 14px"><h3 style="margin: 0 0 6px; font-size: 18px">Lean</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55; font-size: 15px">Entender valor, fluxo, desperdícios e causas.</p></div>
+<div style="border-top: 3px solid #88C808; padding-top: 14px"><h3 style="margin: 0 0 6px; font-size: 18px">Agilidade</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55; font-size: 15px">Conduzir entregas e mudanças em ciclos de aprendizagem.</p></div>
+<div style="border-top: 3px solid #88C808; padding-top: 14px"><h3 style="margin: 0 0 6px; font-size: 18px">Inteligência Artificial</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55; font-size: 15px">Apoiar interpretação, conhecimento e execução em tarefas adequadas.</p></div>
+<div style="border-top: 3px solid #88C808; padding-top: 14px"><h3 style="margin: 0 0 6px; font-size: 18px">Gestão da mudança</h3><p style="margin: 0; color: #DCE7EB; line-height: 1.55; font-size: 15px">Envolver lideranças e usuários para favorecer a adoção.</p></div>
+</div>
+</div>
+</div>
+
 <p style="margin: 40px 0 0; font-size: 17px; line-height: 1.6; color: #FFFFFF; max-width: 760px"><strong>Agentes com autonomia definida.</strong> Projetamos agentes e automações conectados aos seus processos, com conhecimento, integrações, limites de atuação e supervisão humana conforme o risco de cada tarefa.</p>
 </div>
 </section>
-<section id="sobre" style="padding: 80px 0">
-<div class="wrap hero-grid" style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: center">
-<img src="roberto.jpg" alt="Roberto Trintin, fundador da RT Lean Activities Pro" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; border-radius: 16px; display: block">
-<div>
-<p class="eyebrow">Sobre</p>
-<h2 class="h2">Roberto Trintin</h2>
-<p class="lead" style="margin-bottom: 16px">Especialista em Lean, Agilidade e Inteligência Artificial aplicada, com atuação que vai da liderança de times de desenvolvimento à arquitetura de agentes autônomos.</p>
-<p style="margin: 0 0 14px; font-size: 16px; line-height: 1.6">Especialização em Lean e projetos de melhoria em construção civil, logística e ambientes administrativos. Na gestão de times, trabalha com Scrum, Kanban, SAFe e Nexus, apoiando decisões com métricas de fluxo e qualidade.</p>
-<p style="margin: 0 0 14px; font-size: 16px; line-height: 1.6">Duas pós-graduações em Inteligência Artificial. Implementa automações, desenvolve agentes e é professor do módulo de IA em curso de pós-graduação.</p>
-<p style="margin: 0; font-size: 15px; color: #5A6B73">A RT Lean Activities Pro nasceu em 2022 a partir do pensamento Lean e ampliou sua atuação para Agilidade e IA, sem perder a base: entender o problema, melhorar o fluxo e desenvolver as pessoas.</p>
+
+<section id="glossario" style="padding: 88px 0">
+<div class="wrap">
+<p class="eyebrow">Glossário</p>
+<h2 class="h2">Vocabulário Lean em um minuto</h2>
+<p class="lead">Os termos que usamos nos projetos, explicados de forma direta.</p>
+<div class="grid" style="margin-top: 36px; grid-template-columns: repeat(auto-fit,minmax(240px,1fr))">
+<div class="card"><h3>Muda</h3><p>Qualquer atividade que consome recurso sem gerar valor para quem recebe o produto ou serviço.</p></div>
+<div class="card"><h3>Lead time</h3><p>Tempo total entre o pedido do cliente e a entrega. Costuma ser o indicador que mais revela esperas.</p></div>
+<div class="card"><h3>Gemba</h3><p>O lugar onde o trabalho acontece. Ir ao gemba é ver o problema de perto, antes de propor solução.</p></div>
+<div class="card"><h3>Kaizen</h3><p>Melhoria contínua feita em pequenos passos, com a participação de quem executa o trabalho.</p></div>
+<div class="card"><h3>SMED</h3><p>Troca rápida de ferramenta: método para reduzir o tempo de setup de máquinas.</p></div>
+<div class="card"><h3>WIP</h3><p>Trabalho em andamento. Limitá-lo melhora o fluxo e reduz a espera entre as etapas.</p></div>
+<div class="card"><h3>VSM (Mapa do Fluxo de Valor)</h3><p>Desenho do fluxo de materiais e informações, da matéria-prima até a entrega do produto acabado.</p></div>
+<div class="card"><h3>GBM e GBO</h3><p>Gráfico de Balanceamento de Manufatura e Gráfico de Balanceamento Operacional: ferramentas para equilibrar o trabalho entre postos e operadores.</p></div>
 </div>
 </div>
 </section>
-<section id="experiencia" style="padding: 80px 0; background: #F2F7EE">
+
+<section id="experiencia" style="background: #F2F7EE; padding: 80px 0">
 <div class="wrap">
 <p class="eyebrow">Experiência</p>
 <h2 class="h2">Lean aplicado em fábrica, logística e times</h2>
@@ -161,10 +307,25 @@ a{color:#083838}a:hover{color:#042424}
 </div>
 </div>
 </section>
+
+<section id="sobre" style="padding: 80px 0">
+<div class="wrap hero-grid" style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: center">
+<img src="roberto.jpg" alt="Roberto Trintin, fundador da RT Lean Activities Pro" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; border-radius: 16px; display: block">
+<div>
+<p class="eyebrow">Sobre</p>
+<h2 class="h2">Roberto Trintin</h2>
+<p class="lead" style="margin-bottom: 16px">Especialista em Lean, Agilidade e Inteligência Artificial aplicada, com atuação que vai da liderança de times de desenvolvimento à arquitetura de agentes autônomos.</p>
+<p style="margin: 0 0 14px; font-size: 16px; line-height: 1.6">Especialização em Lean e projetos de melhoria em construção civil, logística e ambientes administrativos. Na gestão de times, trabalha com Scrum, Kanban, SAFe e Nexus, apoiando decisões com métricas de fluxo e qualidade.</p>
+<p style="margin: 0 0 14px; font-size: 16px; line-height: 1.6">Duas pós-graduações em Inteligência Artificial. Implementa automações, desenvolve agentes e é professor do módulo de IA em curso de pós-graduação.</p>
+<p style="margin: 0; font-size: 15px; color: #5A6B73">A RT Lean Activities Pro nasceu em 2022 a partir do pensamento Lean e ampliou sua atuação para Agilidade e IA, sem perder a base: entender o problema, melhorar o fluxo e desenvolver as pessoas.</p>
+</div>
+</div>
+</section>
+
 <section id="contato" style="background: #042424; padding: 88px 0; color: #FFFFFF">
 <div class="wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px">
 <img src="emblema.jpg" alt="" aria-hidden="true" style="width: 96px; height: 96px; border-radius: 50%">
-<h2 class="h2" style="color: #FFFFFF; margin: 0">Vamos entender onde seu processo está travando.</h2>
+<h2 class="h2" style="color: #FFFFFF; margin: 0">Vamos enxergar onde seu processo está travando.</h2>
 <p class="lead" style="color: #C9D6DB; text-align: center">Conte qual processo você quer melhorar. A primeira conversa serve para entender o desafio e definir os próximos passos.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 8px">
 <a class="btn btn-p" href="https://wa.me/5551997943696?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20um%20desafio%20no%20meu%20processo." target="_blank" rel="noopener">WhatsApp (51) 99794-3696</a>
@@ -172,6 +333,7 @@ a{color:#083838}a:hover{color:#042424}
 </div>
 </div>
 </section>
+
 <footer style="background: #031818; padding: 28px 0; color: #9FB3BA; font-size: 14px">
 <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px">
 <span>RT Lean Activities Pro · Processos, Gestão e Inteligência Artificial</span>
